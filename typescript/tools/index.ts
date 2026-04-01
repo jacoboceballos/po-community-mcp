@@ -1,4 +1,11 @@
 import { PatientAgeToolInstance } from "./PatientAgeTool";
 import { PatientIdToolInstance } from "./PatientIdTool";
-
-export { PatientAgeToolInstance, PatientIdToolInstance };
+import { PatientVitalsToolInstance } from "./PatientVitalsTool";
+import { PatientLabResultsToolInstance } from "./PatientLabResultsTool";
+ 
+export {
+  PatientAgeToolInstance,
+  PatientIdToolInstance,
+  PatientVitalsToolInstance,
+  PatientLabResultsToolInstance,
+};
