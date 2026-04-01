@@ -42,10 +42,8 @@ app.post("/mcp", async (req, res) => {
       },
       {
         capabilities: {
-          experimental: {
-            fhir_context_required: {
-              value: true,
-            },
+          extensions: {
+            "ai.promptopinion/fhir-context": {},
           },
         },
       },
