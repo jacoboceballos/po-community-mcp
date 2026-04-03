@@ -17,7 +17,7 @@ switch (env) {
     break;
   default:
     allowedHosts.push("localhost");
-    allowedHosts.push("marva-interisland-expressly.ngrok-free.dev");
+    allowedHosts.push("unconfoundingly-unencircled-son.ngrok-free.dev");
 }
 
 const app = createMcpExpressApp({
