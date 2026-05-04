@@ -8,8 +8,14 @@ import { PatientLabResultsToolInstance } from "./PatientLabResultsTool";
 import { PatientMedicationsToolInstance, PatientConditionsToolInstance, PatientAllergiesToolInstance } from "./SharedFhirTools";
 import { AssessRedFlagsToolInstance, CheckDrugInteractionsToolInstance, RankDifferentialDiagnosesToolInstance, AssessRiskIndicatorsToolInstance } from "./DiagnosisAgentTools";
 import { GenerateSoapNoteToolInstance, ReconcileMedicationsToolInstance, BuildRecoveryTimelineToolInstance } from "./CareCoordinationTools";
+import { ValidateResponseToolInstance } from "./ValidateResponseTool";
+import { AppleWatchVitalsToolInstance } from "./AppleWatchVitalsTool";
+import { CreatePatientToolInstance } from "./CreatePatientTool";
+
 
 export {
+  //Patient Fetch
+  CreatePatientToolInstance,
   // Original
   PatientAgeToolInstance,
   PatientIdToolInstance,
@@ -28,4 +34,8 @@ export {
   GenerateSoapNoteToolInstance,
   ReconcileMedicationsToolInstance,
   BuildRecoveryTimelineToolInstance,
+  //Checker
+  ValidateResponseToolInstance,
+  //Apple Watch
+  AppleWatchVitalsToolInstance,
 };

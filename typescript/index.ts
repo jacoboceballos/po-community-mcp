@@ -84,3 +84,31 @@ app.post("/mcp", async (req, res) => {
 app.listen(port, () => {
   console.log(`MCP server listening on port ${port}`);
 });
+
+
+  app.get("/download/patient/:patientId", (req, res) => {
+  const { patientId } = req.params;
+  const namePart = patientId.replace("NEW-", "").split("-")[0];
+
+  const bundle = {
+    resourceType: "Bundle",
+    type: "batch",
+    entry: [
+      {
+        resource: {
+          resourceType: "Patient",
+          name: [{ use: "official", given: [namePart] }],
+          active: true,
+        },
+        request: {
+          method: "POST",
+          url: "Patient",
+        },
+      },
+    ],
+  };
+
+  res.setHeader("Content-Disposition", `attachment; filename="${patientId}.json"`);
+  res.setHeader("Content-Type", "application/json");
+  res.send(JSON.stringify(bundle, null, 2));
+});
